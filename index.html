@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registro de Máquinas</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="tarjeta">
+    <h1>Registro de Máquinas</h1>
+    <p class="subtitulo">Taller de la escuela</p>
+
+    <label for="nombre">Nombre de la máquina</label>
+    <input type="text" id="nombre" placeholder="Ej: Taladro de banco">
+
+    <label for="tipo">Tipo de máquina</label>
+    <select id="tipo">
+      <option value="Herramienta eléctrica">Herramienta eléctrica</option>
+      <option value="Impresora 3D">Impresora 3D</option>
+      <option value="Máquina de soldar">Máquina de soldar</option>
+    </select>
+
+    <label for="horas">Horas de uso acumuladas</label>
+    <input type="number" id="horas" min="0" step="0.5" placeholder="Ej: 120">
+
+    <div class="botones">
+      <button type="button" class="primario" onclick="registrarMaquina()">Registrar</button>
+      <button type="button" class="secundario" onclick="cambiarPagina('normas.html')">Ver Normas</button>
+    </div>
+
+    <div id="resultado" class="oculto"></div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

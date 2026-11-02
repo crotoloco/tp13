@@ -1,0 +1,77 @@
+:root {
+  --fondo: #2b2d2f;
+  --tarjeta: #f4f1ea;
+  --texto: #1f2123;
+  --amarillo: #f2b705;
+  --gris: #6b6f73;
+  --rojo: #b3261e;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  background: var(--fondo);
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--texto);
+}
+
+.tarjeta {
+  width: 100%;
+  max-width: 460px;
+  background: var(--tarjeta);
+  padding: 2rem;
+  border-top: 10px solid var(--amarillo);
+  border-radius: 6px;
+}
+
+h1 { margin: 0 0 .25rem; font-size: 1.7rem; }
+.subtitulo { margin: 0 0 1.25rem; color: var(--gris); }
+
+label { display: block; margin: 1rem 0 .35rem; font-weight: bold; }
+
+input, select {
+  width: 100%;
+  padding: .6rem;
+  font-size: 1rem;
+  border: 2px solid var(--texto);
+  border-radius: 4px;
+  background: #fff;
+}
+
+input:focus-visible, select:focus-visible, button:focus-visible {
+  outline: 3px solid var(--amarillo);
+  outline-offset: 2px;
+}
+
+.botones { display: flex; gap: .75rem; flex-wrap: wrap; margin-top: 1.5rem; }
+
+button {
+  padding: .65rem 1.1rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid var(--texto);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.primario { background: var(--amarillo); color: var(--texto); }
+.secundario { background: transparent; color: var(--texto); }
+.peligro { background: var(--rojo); border-color: var(--rojo); color: #fff; margin-top: .75rem; }
+
+#resultado {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #fff;
+  border-left: 6px solid var(--texto);
+}
+#resultado p { margin: .4rem 0; }
+
+.oculto { display: none; }
+
+.normas { padding-left: 1.2rem; line-height: 1.7; }
